@@ -1,0 +1,3 @@
+# Write your MySQL query statement below
+
+select buyer_id from Sales s inner join Product p on s.product_id=p.product_id group by buyer_id having sum(case when product_name='S8' then 1 else 0 end)>0 and sum(case when product_name='iPhone' then 1 else 0 end)=0;
